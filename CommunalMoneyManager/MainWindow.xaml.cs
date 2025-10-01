@@ -29,11 +29,18 @@ namespace CommunalMoneyManager
 				return;
 			}
 
-			if (!int.TryParse(amountText, out int amount) || amount < 0)
+			if (!int.TryParse(amountText, out int amount))
 			{
 				MessageBox.Show("Érvényes számot adj meg az összeghez!", "Hibás adat", MessageBoxButton.OK, MessageBoxImage.Warning);
 				return;
 			}
+
+			if (amount < 0)
+			{
+				MessageBox.Show("Nem lophatsz a kommunális kasszából...", "Hibás adat", MessageBoxButton.OK, MessageBoxImage.Warning);
+				return;
+			}
+
 
 			string entry = $"{name} – {amount} Ft";
 			StudentListBox.Items.Add(entry);

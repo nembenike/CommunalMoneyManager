@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CommunalMoneyManager"
         mc:Ignorable="d"
+		ResizeMode="NoResize"
         Title="CommunalMoneyManager (CMM)" Height="450" Width="650" Background="#FFBEED5E">
 	<Grid Margin="20">
 		<Grid.RowDefinitions>
@@ -13,13 +14,12 @@
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
-
 		<StackPanel Orientation="Horizontal" Margin="0 0 0 10">
 			<TextBlock Text="Név:" VerticalAlignment="Center" Margin="0 0 10 0"/>
 			<TextBox x:Name="NameTextBox" Width="200" Margin="0 0 10 0"/>
 			<TextBlock Text="Összeg (Ft):" VerticalAlignment="Center" Margin="0 0 10 0"/>
 			<TextBox x:Name="AmountTextBox" Width="100" Margin="0 0 10 0"/>
-			<Button Content="Hozzáadás" Width="100" Click="AddButton_Click" Background="#FF43D01C"/>
+			<Button Content="Hozzáadás" Width="100" Click="AddButton_Click" Background="#FF43D01C" Foreground="White" FontWeight="Bold"/>
 		</StackPanel>
 
 		<ListBox x:Name="StudentListBox" Grid.Row="1" Height="200" Margin="0 0 0 10" Background="{x:Null}" Foreground="Black" BorderBrush="White"/>
@@ -32,9 +32,9 @@
 		</TextBlock>
 
 		<StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left">
-			<Button Content="CE" Width="80" Click="ClearFields_Click" Background="Red" Foreground="White"/>
-			<Button Content="C" Width="80" Click="ClearAll_Click" Background="Red" Foreground="White"/>
-			<Button Content="Kijelölt törlése" Width="150" Click="DeleteSelected_Click" Background="Red" Foreground="White"/>
+			<Button Content="CE" Width="80" Click="ClearFields_Click" Background="Red" Foreground="White" FontWeight="Bold"/>
+			<Button Content="C" Width="80" Click="ClearAll_Click" Background="Red" Foreground="White" FontWeight="Bold"/>
+			<Button Content="Kijelölt törlése" Width="150" Click="DeleteSelected_Click" Background="Red" Foreground="White" FontWeight="Bold"/>
 		</StackPanel>
 		
 		
